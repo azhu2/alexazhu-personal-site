@@ -1,0 +1,3 @@
+[submodule "src/assets/resume"]
+	path = src/assets/resume
+	url = https://github.com/azhu2/resume

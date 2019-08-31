@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 
+// ng2-pdf-viewer
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+
 // Components
 import { AppComponent } from './app.component';
 import { ResumeComponent } from './resume/resume.component';
@@ -22,12 +25,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    AppRoutingModule
-  ],
-  exports: [
-    MatButtonModule
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
