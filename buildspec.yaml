@@ -3,10 +3,12 @@ version: 0.2
 env:
     variables:
         S3_BUCKET: "alexazhu.com.test"
-        BUILD_ENV : "prod"
+        BUILD_ENV: "prod"
 
 phases:
     install:
+        runtime-versions:
+            nodejs: 10
         commands:
             - echo Installing source NPM dependencies...
             - npm install
