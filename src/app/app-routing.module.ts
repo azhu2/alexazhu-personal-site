@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
+import { LinksComponent } from './links/links.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
     { path: '',           component: HomeComponent, pathMatch: 'full' },
     { path: 'resume',     component: ResumeComponent },
+    { path: 'links',      component: LinksComponent },
     { path: '**',         component: NotFoundComponent }
 ];
 

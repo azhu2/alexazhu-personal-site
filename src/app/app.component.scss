@@ -1,0 +1,26 @@
+@import '../styles.scss';
+
+mat-toolbar {
+    padding: 0;
+    flex: 0 0 2em;
+    display: flex;
+
+    a[mat-flat-button] {
+        border-radius: 0;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        flex: 1 1 auto;
+        background-color: mat-color($mat-primary, main);
+    }
+
+    a[mat-flat-button].accent {
+        background-color: mat-color($mat-accent, main);
+    }
+}
+
+#page-container {
+    padding: 10px;
+    background-color: mat-color($mat-light-theme-background, background);
+    flex: 1 1 auto;
+}
