@@ -1,6 +1,10 @@
 <mat-toolbar color="primary">
     <a mat-flat-button routerLink="/" class="accent">Home</a>
-    <a mat-flat-button>Projects</a>
+    <a mat-flat-button [matMenuTriggerFor]="projects">Projects</a>
+    <mat-menu #projects="matMenu">
+        <a mat-flat-button routerLink="new-tab-page">New Tab Dashboard</a>
+        <a mat-flat-button routerLink="call-blocker">Android Call Blocker</a>
+    </mat-menu>
     <a mat-flat-button routerLink="resume">Resume</a>
     <a mat-flat-button routerLink="links">Links</a>
 </mat-toolbar>

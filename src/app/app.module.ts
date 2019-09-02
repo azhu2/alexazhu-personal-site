@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 // ng2-pdf-viewer
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -32,6 +33,7 @@ import { LinksComponent } from './links/links.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
+    MatMenuModule,
     PdfViewerModule
   ],
   providers: [],

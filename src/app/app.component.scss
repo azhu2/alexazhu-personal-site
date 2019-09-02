@@ -1,4 +1,4 @@
-@import '../styles.scss';
+@import '../theme';
 
 mat-toolbar {
     padding: 0;
@@ -14,11 +14,17 @@ mat-toolbar {
         margin: 0;
         height: 100%;
         flex: 1 0 5em;
-        background-color: mat-color($mat-primary, main);
-    }
 
-    a[mat-flat-button].accent {
-        background-color: mat-color($mat-accent, main);
+        /* Flexbox to center button text (vertical and horizontal) */
+        display: flex;
+        span.mat-button-wrapper {
+            margin: auto
+        }
+
+        background-color: mat-color($mat-primary, main);
+        &.accent {
+            background-color: mat-color($mat-accent, main);
+        }
     }
 }
 
@@ -26,4 +32,27 @@ mat-toolbar {
     padding: 10px;
     background-color: mat-color($mat-light-theme-background, background);
     flex: 1 1 auto;
+}
+
+.cdk-overlay-pane {
+    .mat-menu-panel {
+        background: mat-color($mat-primary, lighter);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        max-width: unset;
+
+        a {
+            display: block;
+            background: mat-color($mat-primary, lighter);
+            color: mat-color($mat-light-theme-foreground, accent-text);
+            min-width: 12em;
+            width: 20vw;
+
+            /* Flexbox to left-align button text */
+            display: flex;
+            span.mat-button-wrapper {
+                margin-right: auto;
+            }
+        }
+    }
 }
