@@ -13,6 +13,16 @@ app-root {
   flex-direction: column;
 }
 
+  /* Flexbox to center button text */
+[mat-flat-button] {
+  display: flex;
+
+  span.mat-button-wrapper {
+    margin: auto;
+  }
+}
+
+
 /**
 * Generated theme by Material Theme Generator
 * https://material-theme-generator.travetto.io
