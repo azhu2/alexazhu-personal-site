@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { ResumeComponent } from './resume/resume.component';
-import { LinksComponent } from './links/links.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ResumeComponent } from './pages/resume/resume.component';
+import { LinksComponent } from './pages/links/links.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
     { path: '',           component: HomeComponent, pathMatch: 'full' },

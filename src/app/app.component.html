@@ -1,12 +1,6 @@
-<mat-toolbar color="primary">
+<mat-toolbar id="nav-bar" color="primary">
     <a mat-flat-button routerLink="/" class="accent">Home</a>
-    <a mat-flat-button #projectButton [matMenuTriggerFor]="projectsMenu" #projectMenuTrigger="matMenuTrigger" (mouseenter)="projectButtonEnter()" (mouseleave)="projectButtonLeave()" style="z-index:1050;">Projects</a>
-    <mat-menu #projectsMenu="matMenu">
-        <span (mouseenter)="projectMenuEnter()" (mouseleave)="projectMenuLeave()">
-            <a mat-flat-button routerLink="new-tab-page">New Tab Dashboard</a>
-            <a mat-flat-button routerLink="call-blocker">Android Call Blocker</a>
-        </span>
-    </mat-menu>
+    <app-project-menu></app-project-menu>
     <a mat-flat-button routerLink="resume">Resume</a>
     <a mat-flat-button routerLink="links">Links</a>
 </mat-toolbar>

@@ -1,0 +1,7 @@
+<a mat-flat-button #projectButton [matMenuTriggerFor]="projectsMenu" #projectMenuTrigger="matMenuTrigger" (mouseenter)="projectButtonEnter()" (mouseleave)="projectButtonLeave()" style="z-index:1050;">Projects</a>
+<mat-menu #projectsMenu="matMenu">
+    <span (mouseenter)="projectMenuEnter()" (mouseleave)="projectMenuLeave()">
+        <a mat-flat-button routerLink="new-tab-page">New Tab Dashboard</a>
+        <a mat-flat-button routerLink="call-blocker">Android Call Blocker</a>
+    </span>
+</mat-menu>

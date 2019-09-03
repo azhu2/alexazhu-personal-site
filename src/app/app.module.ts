@@ -14,10 +14,11 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Components
 import { AppComponent } from './app.component';
-import { ResumeComponent } from './resume/resume.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { LinksComponent } from './links/links.component';
+import { ResumeComponent } from './pages/resume/resume.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { LinksComponent } from './pages/links/links.component';
+import { ProjectMenuComponent } from './util/project-menu/project-menu.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LinksComponent } from './links/links.component';
     ResumeComponent,
     HomeComponent,
     NotFoundComponent,
-    LinksComponent
+    LinksComponent,
+    ProjectMenuComponent
   ],
   imports: [
     BrowserModule,
