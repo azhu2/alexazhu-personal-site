@@ -1,11 +1,13 @@
 @import '../../../theme';
 
-.cdk-overlay-pane {
-    .mat-menu-panel {
-        background: mat-color($mat-primary, lighter);
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
-        max-width: unset;
+.cdk-overlay-pane .mat-menu-panel {
+    background: mat-color($mat-primary, lighter);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    max-width: unset;
+
+    .mat-menu-content {
+        padding: 0;
 
         a {
             display: block;
@@ -13,6 +15,8 @@
             color: mat-color($mat-light-theme-foreground, accent-text);
             min-width: 12em;
             width: 20vw;
+            margin: 0;
+            padding: 0.5em 1.5em;
 
             /* Flexbox to left-align button text */
             display: flex;
