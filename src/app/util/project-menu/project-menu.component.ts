@@ -58,8 +58,10 @@ export class ProjectMenuComponent implements OnInit {
         this.projectMenuEntered = false;
 
         setTimeout(() => {
-            if(this.projectMenuTrigger.menuOpen && !this.projectButtonEntered) {
+            if(this.projectMenuTrigger.menuOpen) {
                 this.projectMenuTrigger.closeMenu();
+            }
+            if(!this.projectButtonEntered) {
                 FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.remove(focusClass));
             }
         }, MENU_TRANSITION_TIMEOUT_MS);
