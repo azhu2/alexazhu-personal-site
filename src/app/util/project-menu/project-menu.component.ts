@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { MENU_TRANSITION_TIMEOUT_MS, FOCUS_CLASSES } from '../constants';
 
 @Component({
   selector: 'app-project-menu',
@@ -18,8 +19,6 @@ export class ProjectMenuComponent implements OnInit {
     @ViewChild('projectMenuTrigger', {static: false}) projectMenuTrigger: MatMenuTrigger;
     @ViewChild('projectButton', {read: ElementRef, static: false}) projectButton: ElementRef;
 
-    static get menuTransitionTimeoutMs() { return 100; }
-
     constructor() { }
 
     ngOnInit() {
@@ -31,9 +30,9 @@ export class ProjectMenuComponent implements OnInit {
         setTimeout(() => {
             if(!this.projectMenuTrigger.menuOpen) {
                 this.projectMenuTrigger.openMenu();
-                this.focusButton();
+                FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.add(focusClass));
             }
-        }, ProjectMenuComponent.menuTransitionTimeoutMs);
+        }, MENU_TRANSITION_TIMEOUT_MS);
     }
 
     projectButtonLeave() {
@@ -42,9 +41,9 @@ export class ProjectMenuComponent implements OnInit {
         setTimeout(() => {
             if(this.projectMenuTrigger.menuOpen && !this.projectMenuEntered) {
                 this.projectMenuTrigger.closeMenu();
-                this.unfocusButton();
+                FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.remove(focusClass));
             }
-        }, ProjectMenuComponent.menuTransitionTimeoutMs);
+        }, MENU_TRANSITION_TIMEOUT_MS);
     }
 
     projectMenuEnter() {
@@ -52,7 +51,7 @@ export class ProjectMenuComponent implements OnInit {
 
         setTimeout(() => {
             // no-op
-        }, ProjectMenuComponent.menuTransitionTimeoutMs);
+        }, MENU_TRANSITION_TIMEOUT_MS);
     }
 
     projectMenuLeave() {
@@ -61,18 +60,8 @@ export class ProjectMenuComponent implements OnInit {
         setTimeout(() => {
             if(this.projectMenuTrigger.menuOpen && !this.projectButtonEntered) {
                 this.projectMenuTrigger.closeMenu();
-                this.unfocusButton();
+                FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.remove(focusClass));
             }
-        }, ProjectMenuComponent.menuTransitionTimeoutMs);
-    }
-
-    focusButton() {
-        this.projectButton.nativeElement.classList.add('cdk-focused');
-        this.projectButton.nativeElement.classList.add('cdk-program-focused');
-    }
-
-    unfocusButton() {
-        this.projectButton.nativeElement.classList.remove('cdk-focused');
-        this.projectButton.nativeElement.classList.remove('cdk-program-focused');
+        }, MENU_TRANSITION_TIMEOUT_MS);
     }
 }
