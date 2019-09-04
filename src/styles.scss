@@ -1,4 +1,6 @@
 @import 'theme';
+
+// TODO Figure out why I have to include these here
 @import 'app/app.component';
 @import 'app/pages/home/home.component';
 @import 'app/util/project-menu/project-menu.component';
@@ -25,7 +27,7 @@ img.img-icon {
 
 .page-content {
     text-align: center;
-    padding: 1em 5em;
+    padding: 1em 1em;
     color: mat-color($mat-light-theme-foreground, text);
 }
 

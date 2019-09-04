@@ -1,0 +1,9 @@
+@import '../../../theme';
+
+.page-content {
+    text-align: left;
+}
+
+a {
+    color: mat-color($mat-accent, main);
+}
