@@ -1,0 +1,23 @@
+@import '../../../theme';
+
+app-home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .img-splash {
+        flex: 0 0 auto;
+    }
+
+    .page-content {
+        flex: 1 1 auto;
+    }
+
+    .about {
+        color: mat-color($mat-accent, lighter);
+        font-size: 0.8em;
+        font-style: italic;
+        text-align: center;
+        flex: 0 0 auto;
+    }
+}

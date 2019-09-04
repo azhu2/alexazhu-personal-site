@@ -1,5 +1,6 @@
 @import 'theme';
 @import 'app/app.component';
+@import 'app/pages/home/home.component';
 @import 'app/util/project-menu/project-menu.component';
 
 html, body {
@@ -20,4 +21,18 @@ app-root {
 img.img-icon {
     height: 24px;
     width: 24px;
+}
+
+.page-content {
+    text-align: center;
+    padding: 1em 5em;
+    color: mat-color($mat-light-theme-foreground, text);
+}
+
+.img-splash {
+    text-align: center;
+
+    img {
+        width: 50vmin;
+    }
 }
