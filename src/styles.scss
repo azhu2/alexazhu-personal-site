@@ -20,14 +20,21 @@ app-root {
     flex-direction: column;
 }
 
+a {
+    color: mat-color($mat-accent, main);
+}
+
+ul {
+    list-style-type: none;
+}
+
 img.img-icon {
     height: 24px;
     width: 24px;
 }
 
 .page-content {
-    text-align: center;
-    padding: 1em 1em;
+    padding: 1em 2em;
     color: mat-color($mat-light-theme-foreground, text);
 }
 
@@ -36,5 +43,16 @@ img.img-icon {
 
     img {
         width: 50vmin;
+    }
+}
+
+.links-toolbar {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+        padding: 0 1em;
     }
 }

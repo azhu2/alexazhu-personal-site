@@ -1,1 +1,25 @@
-Source: <a href="https://github.com/azhu2/new-tab"><img class="img-icon" src="../../../assets/github.svg" /></a>
+<div class="img-splash">
+    <img src="../../../assets/new-tab-screenshot.png" />
+</div>
+<div class="page-content">
+    <p>
+        A Chrome extension I made for personal use to replace the boring default new tab homepage. Displays the browser's location, time, weather, and any severe weather alerts and automatically responds to changes in location and timezone. The background color is the current time as a hex code.
+    </p>
+    <p>
+        The webapp itself is built in AngularJS 1.6, and service calls are routed through Python-based AWS Lambda functions.
+    </p>
+    <p>
+        The original idea was inspired by <a href="https://www.reddit.com/r/InternetIsBeautiful/comments/2p94dk/this_site_calculates_the_hex_colour_of_the/" matTooltip="Original site dead; link to best surviving reference">What colour is it?</a>. Geolocation information is from the <a href="https://cloud.google.com/maps-platform/">Google Maps API</a>. Weather comes from the <a href="https://developer.forecast.io/">Dark Sky Forecast API</a>. Weather icons are <a href="http://erikflowers.github.io/weather-icons/">erikflowers/weather-icons</a>. Weather alerts are from the <a href="http://graphical.weather.gov/xml/">National Weather Service API</a>.
+    </p>
+    <ul class="links-toolbar">
+        <li>
+            <a matTooltip="Offline pending website rebuild">Demo</a>
+        </li>
+        <li>
+            <a href="https://github.com/azhu2/new-tab" matTooltip="Github source"><img class="img-icon" src="../../../assets/github.svg" /></a>
+        </li>
+        <li>
+            <a href="https://chrome.google.com/webstore/detail/custom-new-tab/ibcjjgjoocebindaidhifoockakoknbp"><img src="../../../assets/chromewebstore.png" /></a>
+        </li>
+    </ul>
+</div>

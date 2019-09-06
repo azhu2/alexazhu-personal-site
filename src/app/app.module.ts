@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 // PDF viewer
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -46,6 +47,7 @@ import { CallBlockerComponent } from './pages/call-blocker/call-blocker.componen
     MatButtonModule,
     MatToolbarModule,
     MatMenuModule,
+    MatTooltipModule,
     PdfViewerModule
   ],
   providers: [],
