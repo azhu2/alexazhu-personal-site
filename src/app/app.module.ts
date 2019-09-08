@@ -15,7 +15,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 // Components
 import { AppComponent } from './app.component';
-import { ProjectMenuComponent } from './util/project-menu/project-menu.component';
+import { ProjectMenuComponent } from './components/project-menu/project-menu.component';
+import { LinksToolbarComponent } from './components/links-toolbar/links-toolbar.component';
 
 // Directives
 import { HoverFocusDirective } from './directives/hover-focus.directive';
@@ -38,7 +39,8 @@ import { CallBlockerComponent } from './pages/call-blocker/call-blocker.componen
     ProjectMenuComponent,
     HoverFocusDirective,
     NewTabComponent,
-    CallBlockerComponent
+    CallBlockerComponent,
+    LinksToolbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+@import '../../../theme';
+
+.links-container {
+    background-color: mat-color($mat-primary, lighter);
+    padding-bottom: 1em;
+
+    .links-title {
+        text-align: center;
+        text-transform: uppercase;
+        color: mat-color($mat-accent, darker);
+        font-size: 0.8em;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 3em;
+
+        // Matches #page-container in app.component.scss
+        background-color: mat-color($mat-light-theme-background, background);
+
+        ::ng-deep > li {
+            padding: 0 1em;
+        }
+    }
+}
