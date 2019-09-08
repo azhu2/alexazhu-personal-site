@@ -1,14 +1,15 @@
 @import '../../../theme';
 
 .links-container {
-    background-color: mat-color($mat-primary, lighter);
-    padding-bottom: 1em;
+    border: 0.2em solid mat-color($mat-primary, lighter);
 
     .links-title {
         text-align: center;
         text-transform: uppercase;
         color: mat-color($mat-accent, darker);
         font-size: 0.8em;
+        background-color: mat-color($mat-primary, lighter);
+        padding: 0.2em 0;
     }
 
     ul {
