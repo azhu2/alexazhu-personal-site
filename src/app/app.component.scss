@@ -1,4 +1,5 @@
 @import '../theme';
+@import '../variables';
 
 mat-toolbar#nav-bar {
     padding: 0;
@@ -33,7 +34,7 @@ mat-toolbar#nav-bar {
 
 #page-container {
     padding: 1em;
-    background-color: mat-color($mat-light-theme-background, background);
+    background-color: $page-background;
     flex: 1 1 auto;
 }
 

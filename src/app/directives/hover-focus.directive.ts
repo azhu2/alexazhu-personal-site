@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
-import { FOCUS_CLASSES } from '../constants';
+import { FOCUS_CLASSES } from '../../constants';
 
 @Directive({
   selector: '[appHoverFocus]'

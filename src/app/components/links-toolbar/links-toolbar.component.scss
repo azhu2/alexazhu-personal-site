@@ -1,14 +1,17 @@
 @import '../../../theme';
+@import '../../../variables';
+
+$container-highlight: mat-color($mat-primary, lighter); 
 
 .links-container {
-    border: 0.2em solid mat-color($mat-primary, lighter);
+    border: 0.2em solid $container-highlight;
 
     .links-title {
         text-align: center;
         text-transform: uppercase;
         color: mat-color($mat-accent, darker);
         font-size: 0.8em;
-        background-color: mat-color($mat-primary, lighter);
+        background-color: $container-highlight;
         padding: 0.2em 0;
     }
 
@@ -20,8 +23,7 @@
         justify-content: center;
         min-height: 3em;
 
-        // Matches #page-container in app.component.scss
-        background-color: mat-color($mat-light-theme-background, background);
+        background-color: $page-background;
 
         ::ng-deep > li {
             padding: 0 1em;
