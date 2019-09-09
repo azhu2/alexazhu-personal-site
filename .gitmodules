@@ -1,0 +1,3 @@
+[submodule "src/assets/new-tab"]
+	path = src/assets/new-tab
+	url = https://github.com/azhu2/new-tab
