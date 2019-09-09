@@ -15,12 +15,6 @@ phases:
             - npm install
             - npm install -g @angular/cli
 
-    pre_build:
-        commands:
-            - echo Fetching submodules
-            - cd ${CODEBUILD_SRC_DIR}
-            - git submodule update --init
-
     build:
         commands:
             - echo Build started on `date`
@@ -31,6 +25,8 @@ phases:
             # Clear S3 bucket.
             - aws s3 rm s3://${S3_BUCKET} --recursive
             - echo S3 bucket is cleared.
-            # Copy dist folder to S3 bucket, As of Angular 6, builds are stored inside an app folder in distribution and not at the root of the dist folder
+            # Copy main build artifacts
             - aws s3 cp dist/${APP_NAME} s3://${S3_BUCKET}/ --recursive
+            # Copy new tab directly into assets
+            - aws s3 cp $CODEBUILD_SRC_DIR_new_tab s3://${S3_BUCKET}/assets/ --recursive
             - echo Build completed on `date`
