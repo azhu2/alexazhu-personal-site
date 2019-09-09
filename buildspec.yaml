@@ -15,6 +15,11 @@ phases:
             - npm install
             - npm install -g @angular/cli
 
+    pre_build:
+        commands:
+            - echo Fetching submodules
+            - git submodule update --init
+
     build:
         commands:
             - echo Build started on `date`
