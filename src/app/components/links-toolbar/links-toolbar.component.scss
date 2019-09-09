@@ -1,10 +1,12 @@
 @import '../../../theme';
 @import '../../../variables';
 
-$container-highlight: mat-color($mat-primary, lighter); 
+$container-highlight: mat-color($mat-primary, lighter);
 
 .links-container {
     border: 0.2em solid $container-highlight;
+    max-width: 30em;
+    margin: 0 auto;
 
     .links-title {
         text-align: center;
