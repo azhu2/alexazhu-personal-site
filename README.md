@@ -1,10 +1,16 @@
-# AlexazhuPersonalSite
+# Personal website
+
+Site: https://alexazhu.com
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Prod server
+
+Set up with AWS CodePipeline triggering CodeBuild to copy relevant built artifacts to an S3 static website hosting bucket fronted by CloudFront. Submodules are built in separately as additional CodeBuild "sources". See `buildspec.yaml` for build.
 
 ## Code scaffolding
 
