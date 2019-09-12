@@ -1,6 +1,8 @@
-[submodule "src/assets/new-tab"]
+[submodule "new-tab"]
 	path = src/assets/new-tab
 	url = https://github.com/azhu2/new-tab
-[submodule "src/assets/resume"]
+    ignore = all
+[submodule "/resume"]
 	path = src/assets/resume
 	url = https://github.com/azhu2/resume
+    ignore = all
