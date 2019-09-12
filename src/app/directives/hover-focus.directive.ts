@@ -2,7 +2,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 import { FOCUS_CLASSES } from '../../constants';
 
 @Directive({
-  selector: '[appHoverFocus]'
+    selector: '[appHoverFocus]'
 })
 export class HoverFocusDirective {
     element: HTMLElement;

@@ -30,29 +30,29 @@ import { NewTabComponent } from './pages/new-tab/new-tab.component';
 import { CallBlockerComponent } from './pages/call-blocker/call-blocker.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ResumeComponent,
-    HomeComponent,
-    NotFoundComponent,
-    LinksComponent,
-    ProjectMenuComponent,
-    HoverFocusDirective,
-    NewTabComponent,
-    CallBlockerComponent,
-    LinksToolbarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatTooltipModule,
-    PdfViewerModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ResumeComponent,
+        HomeComponent,
+        NotFoundComponent,
+        LinksComponent,
+        ProjectMenuComponent,
+        HoverFocusDirective,
+        NewTabComponent,
+        CallBlockerComponent,
+        LinksToolbarComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatTooltipModule,
+        PdfViewerModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

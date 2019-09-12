@@ -3,9 +3,9 @@ import { MatMenuTrigger } from '@angular/material/menu';
 import { MENU_TRANSITION_TIMEOUT_MS, FOCUS_CLASSES } from '../../../constants';
 
 @Component({
-  selector: 'app-project-menu',
-  templateUrl: './project-menu.component.html',
-  styleUrls: ['./project-menu.component.scss']
+    selector: 'app-project-menu',
+    templateUrl: './project-menu.component.html',
+    styleUrls: ['./project-menu.component.scss']
 })
 
 /*
