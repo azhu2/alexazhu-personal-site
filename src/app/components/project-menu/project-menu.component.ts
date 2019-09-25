@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MENU_TRANSITION_TIMEOUT_MS, FOCUS_CLASSES } from '../../../constants';
 
