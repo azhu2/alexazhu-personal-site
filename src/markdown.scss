@@ -29,4 +29,10 @@ markdown {
             overflow: auto;
         }
     }
+
+    blockquote {
+        margin-left: 0;
+        border-left: 4px solid mat-color($mat-accent, lighter);
+        padding-left: 1em;
+    }
 }
