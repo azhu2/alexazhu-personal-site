@@ -28,7 +28,7 @@ export class ProjectMenuComponent implements OnInit {
         this.projectButtonEntered = true;
 
         setTimeout(() => {
-            if(!this.projectMenuTrigger.menuOpen) {
+            if (!this.projectMenuTrigger.menuOpen) {
                 this.projectMenuTrigger.openMenu();
                 FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.add(focusClass));
             }
@@ -39,7 +39,7 @@ export class ProjectMenuComponent implements OnInit {
         this.projectButtonEntered = false;
 
         setTimeout(() => {
-            if(this.projectMenuTrigger.menuOpen && !this.projectMenuEntered) {
+            if (this.projectMenuTrigger.menuOpen && !this.projectMenuEntered) {
                 this.projectMenuTrigger.closeMenu();
                 FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.remove(focusClass));
             }
@@ -58,10 +58,10 @@ export class ProjectMenuComponent implements OnInit {
         this.projectMenuEntered = false;
 
         setTimeout(() => {
-            if(this.projectMenuTrigger.menuOpen) {
+            if (this.projectMenuTrigger.menuOpen) {
                 this.projectMenuTrigger.closeMenu();
             }
-            if(!this.projectButtonEntered) {
+            if (!this.projectButtonEntered) {
                 FOCUS_CLASSES.forEach(focusClass => this.projectButton.nativeElement.classList.remove(focusClass));
             }
         }, MENU_TRANSITION_TIMEOUT_MS);

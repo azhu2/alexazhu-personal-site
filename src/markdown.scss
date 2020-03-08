@@ -1,0 +1,32 @@
+@import 'theme';
+
+markdown {
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+
+        * {
+            padding: 0.25em 0.5em;
+            border: 1px solid mat-color($mat-primary, main);
+        }
+
+        tr:nth-child(even) {
+            background-color: mat-color($mat-primary, lighter);
+        }
+    }
+
+    code {
+        color: mat-color($mat-primary, darker);
+    }
+
+    pre {
+        background-color: mat-color($mat-primary, lighter);
+        padding: 0.5em;
+        display: inline-flex;
+        max-width: 100%;
+
+        code {
+            overflow: auto;
+        }
+    }
+}

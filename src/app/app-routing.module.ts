@@ -7,6 +7,7 @@ import { LinksComponent } from './pages/links/links.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NewTabComponent } from './pages/new-tab/new-tab.component';
 import { CallBlockerComponent } from './pages/call-blocker/call-blocker.component';
+import { FlippingComponent } from './pages/flipping/flipping.component';
 
 const routes: Routes = [
     { path: '',                       component: HomeComponent, pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'links',                  component: LinksComponent },
     { path: 'projects/new-tab',       component: NewTabComponent },
     { path: 'projects/call-blocker',  component: CallBlockerComponent },
+    { path: 'projects/538-flipping',  component: FlippingComponent },
     { path: '**',                     component: NotFoundComponent }
 ];
 

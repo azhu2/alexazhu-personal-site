@@ -35,4 +35,7 @@ phases:
             # Copy resume pdf only
             - aws s3 cp $CODEBUILD_SRC_DIR_resume/Resume.pdf s3://${S3_BUCKET}/assets/resume/Resume.pdf
 
+            # Copy 538-flipping README only
+            - aws s3 cp $CODEBUILD_SRC_DIR_flipping/README.md s3://${S3_BUCKET}/assets/538-flipping/README.md
+
             - echo Build completed on `date`

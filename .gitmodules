@@ -2,7 +2,11 @@
     path = src/assets/new-tab
     url = https://github.com/azhu2/new-tab
     ignore = all
-[submodule "/resume"]
+[submodule "resume"]
     path = src/assets/resume
     url = https://github.com/azhu2/resume
+    ignore = all
+[submodule "538-flipping"]
+	path = src/assets/538-flipping
+	url = https://github.com/azhu2/538-flipping
     ignore = all

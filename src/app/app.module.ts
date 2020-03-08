@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,6 +13,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
 // PDF viewer
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+
+// Markdown Renderer
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 // Components
 import { AppComponent } from './app.component';
@@ -28,6 +32,7 @@ import { LinksComponent } from './pages/links/links.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NewTabComponent } from './pages/new-tab/new-tab.component';
 import { CallBlockerComponent } from './pages/call-blocker/call-blocker.component';
+import { FlippingComponent } from './pages/flipping/flipping.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,8 @@ import { CallBlockerComponent } from './pages/call-blocker/call-blocker.componen
     HoverFocusDirective,
     NewTabComponent,
     CallBlockerComponent,
-    LinksToolbarComponent
+    LinksToolbarComponent,
+    FlippingComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,18 @@ import { CallBlockerComponent } from './pages/call-blocker/call-blocker.componen
     MatToolbarModule,
     MatMenuModule,
     MatTooltipModule,
-    PdfViewerModule
+    PdfViewerModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({
+      loader: HttpClient,
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          grm: true,
+          smartypants: true
+        }
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
