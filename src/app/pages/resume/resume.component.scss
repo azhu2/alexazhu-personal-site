@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '../../../theme';
 
 pdf-viewer {
@@ -10,6 +11,6 @@ pdf-viewer {
 a {
     display: block;
     text-align: center;
-    color: mat-color($mat-accent, lighter);
+    color: mat.get-color-from-palette($mat-accent, lighter);
     font-size: 0.8em;
 }

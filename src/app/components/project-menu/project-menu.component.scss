@@ -1,7 +1,8 @@
+@use '~@angular/material' as mat;
 @import '../../../theme';
 
 ::ng-deep .cdk-overlay-pane .mat-menu-panel {
-    background: mat-color($mat-primary, lighter);
+    background: mat.get-color-from-palette($mat-primary, lighter);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     max-width: unset;
@@ -11,8 +12,8 @@
 
         a {
             display: block;
-            background: mat-color($mat-primary, lighter);
-            color: mat-color($mat-light-theme-foreground, accent-text);
+            background: mat.get-color-from-palette($mat-primary, lighter);
+            color: mat.get-color-from-palette(mat.$light-theme-foreground-palette, accent-text);
             min-width: 12em;
             width: 20vw;
             margin: 0;

@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '../../../theme';
 
 :host {
@@ -16,7 +17,7 @@
     }
 
     .about {
-        color: mat-color($mat-accent, lighter);
+        color: mat.get-color-from-palette($mat-accent, lighter);
         font-size: 0.8em;
         font-style: italic;
         text-align: center;
