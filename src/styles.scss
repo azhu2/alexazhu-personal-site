@@ -1,6 +1,15 @@
 @use '@angular/material' as mat;
-@import 'theme';
+@use 'm3-theme';
 @import 'markdown';
+
+@include mat.core();
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+html {
+  @include mat.all-component-themes(m3-theme.$light-theme);
+}
 
 html, body {
     margin: 0;
@@ -18,7 +27,7 @@ app-root {
 }
 
 a {
-    color: mat.m2-get-color-from-palette($mat-accent, main);
+    color: mat.get-theme-color(m3-theme.$light-theme, secondary);
 }
 
 ul {
@@ -32,7 +41,7 @@ img.img-icon {
 
 .page-content {
     padding: 1em 2em;
-    color: mat.m2-get-color-from-palette(mat.$m2-light-theme-foreground-palette, text);
+    color: mat.get-theme-color(m3-theme.$light-theme, on-surface);
 }
 
 .img-splash {

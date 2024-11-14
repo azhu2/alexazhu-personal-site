@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
-@import '../../../theme';
+@use '../../../m3-theme';
 
 a {
-    color: mat.m2-get-color-from-palette($mat-accent, main);
+    color: mat.get-theme-color(m3-theme.$light-theme, secondary);
 }

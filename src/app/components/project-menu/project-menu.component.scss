@@ -1,21 +1,20 @@
 @use '@angular/material' as mat;
-@import '../../../theme';
+@use '../../../m3-theme';
 
-::ng-deep .cdk-overlay-pane .mat-menu-panel {
-    background: mat.m2-get-color-from-palette($mat-primary, lighter);
+::ng-deep .cdk-overlay-pane .mat-mdc-menu-panel {
+    background: mat.get-theme-color(m3-theme.$light-theme, primary-container);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    max-width: unset;
 
-    .mat-menu-content {
+    .mat-mdc-menu-content {
         padding: 0;
+        overflow-y: hidden;
 
         a {
             display: block;
-            background: mat.m2-get-color-from-palette($mat-primary, lighter);
-            color: mat.m2-get-color-from-palette(mat.$m2-light-theme-foreground-palette, accent-text);
+            background: mat.get-theme-color(m3-theme.$light-theme, primary-container);
+            color: mat.get-theme-color(m3-theme.$light-theme, on-primary-container);
             min-width: 12em;
-            width: 20vw;
             margin: 0;
             padding: 0.5em 1.5em;
 

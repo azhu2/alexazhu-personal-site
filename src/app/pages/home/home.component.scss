@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@import '../../../theme';
+@use '../../../m3-theme';
 
 :host {
     display: flex;
@@ -17,7 +17,7 @@
     }
 
     .about {
-        color: mat.m2-get-color-from-palette($mat-accent, lighter);
+        color: mat.get-theme-color(m3-theme.$light-theme, secondary, 70);
         font-size: 0.8em;
         font-style: italic;
         text-align: center;

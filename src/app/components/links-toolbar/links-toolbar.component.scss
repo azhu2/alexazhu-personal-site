@@ -1,20 +1,17 @@
 @use '@angular/material' as mat;
-@import '../../../theme';
-@import '../../../variables';
-
-$container-highlight: mat.m2-get-color-from-palette($mat-primary, lighter);
+@use '../../../m3-theme';
 
 .links-container {
-    border: 0.2em solid $container-highlight;
+    border: 0.2em solid mat.get-theme-color(m3-theme.$light-theme, primary-container);
     max-width: 30em;
     margin: 0 auto;
 
     .links-title {
         text-align: center;
         text-transform: uppercase;
-        color: mat.m2-get-color-from-palette($mat-accent, darker);
+        color: mat.get-theme-color(m3-theme.$light-theme, on-primary-container);
         font-size: 0.8em;
-        background-color: $container-highlight;
+        background-color: mat.get-theme-color(m3-theme.$light-theme, primary-container);
         padding: 0.2em 0;
     }
 
@@ -25,8 +22,6 @@ $container-highlight: mat.m2-get-color-from-palette($mat-primary, lighter);
         align-items: center;
         justify-content: center;
         min-height: 3em;
-
-        background-color: $page-background;
 
         ::ng-deep > li {
             padding: 0 1em;
