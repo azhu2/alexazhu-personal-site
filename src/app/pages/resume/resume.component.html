@@ -1,8 +1,7 @@
-<a href="{{pdfSrc}}">Download</a>
+<a href="../assets/resume/Resume.pdf">Download</a>
 
-<pdf-viewer [src]="pdfSrc"
-            [render-text]="true"
-            [original-size]="false"
-            [show-borders]="true"
-            >
-</pdf-viewer>
+<div class="pdf-viewer">
+    <object type="application/pdf"
+        data="../assets/resume/Resume.pdf#toolbar=0&navpanes=0&view=FitH"
+    ></object>
+</div>

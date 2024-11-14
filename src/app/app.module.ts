@@ -11,9 +11,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-// PDF viewer
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-
 // Markdown Renderer
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -54,7 +51,6 @@ import { FlippingComponent } from './pages/flipping/flipping.component';
         MatToolbarModule,
         MatMenuModule,
         MatTooltipModule,
-        PdfViewerModule,
         MarkdownModule.forRoot({
             loader: HttpClient,
             markedOptions: {

@@ -1,11 +1,14 @@
 @use '@angular/material' as mat;
 @use '../../../m3-theme';
 
-pdf-viewer {
-    display: block;
-    max-width: 1024px;
-    margin: 0 auto;
-    flex: 1;
+.pdf-viewer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    object {
+        flex: 1 1;
+    }    
 }
 
 a {
