@@ -61,7 +61,7 @@ import { FlippingComponent } from './pages/flipping/flipping.component';
     MarkdownModule.forRoot({
       loader: HttpClient,
       markedOptions: {
-        provide: MarkedOptions,
+        provide: {},
         useValue: {
           grm: true,
           smartypants: true
