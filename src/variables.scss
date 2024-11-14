@@ -1,4 +1,4 @@
 @use '@angular/material' as mat;
 @import 'theme';
 
-$page-background: mat.get-color-from-palette(mat.$light-theme-background-palette, background)
+$page-background: mat.m2-get-color-from-palette(mat.$m2-light-theme-background-palette, background)

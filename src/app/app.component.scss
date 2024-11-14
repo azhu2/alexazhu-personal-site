@@ -26,9 +26,9 @@ mat-toolbar#nav-bar {
             margin: auto
         }
 
-        background-color: mat.get-color-from-palette($mat-primary, main);
+        background-color: mat.m2-get-color-from-palette($mat-primary, main);
         &.accent {
-            background-color: mat.get-color-from-palette($mat-accent, main);
+            background-color: mat.m2-get-color-from-palette($mat-accent, main);
         }
     }
 }
@@ -39,7 +39,7 @@ mat-toolbar#nav-bar {
     max-width: 80em;
     margin: 0 auto;
     padding: 1em;
-    border: 1px solid mat.get-color-from-palette($mat-accent, lighter);
+    border: 1px solid mat.m2-get-color-from-palette($mat-accent, lighter);
     border-width: 0 1px;
 
     background-color: $page-background;

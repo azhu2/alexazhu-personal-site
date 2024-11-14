@@ -11,6 +11,6 @@ pdf-viewer {
 a {
     display: block;
     text-align: center;
-    color: mat.get-color-from-palette($mat-accent, lighter);
+    color: mat.m2-get-color-from-palette($mat-accent, lighter);
     font-size: 0.8em;
 }

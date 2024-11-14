@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 // Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,42 +34,35 @@ import { NewTabComponent } from './pages/new-tab/new-tab.component';
 import { CallBlockerComponent } from './pages/call-blocker/call-blocker.component';
 import { FlippingComponent } from './pages/flipping/flipping.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ResumeComponent,
-    HomeComponent,
-    NotFoundComponent,
-    LinksComponent,
-    ProjectMenuComponent,
-    HoverFocusDirective,
-    NewTabComponent,
-    CallBlockerComponent,
-    LinksToolbarComponent,
-    FlippingComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatTooltipModule,
-    PdfViewerModule,
-    HttpClientModule,
-    MarkdownModule.forRoot({
-      loader: HttpClient,
-      markedOptions: {
-        provide: {},
-        useValue: {
-          grm: true,
-          smartypants: true
-        }
-      }
-    }),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        ResumeComponent,
+        HomeComponent,
+        NotFoundComponent,
+        LinksComponent,
+        ProjectMenuComponent,
+        HoverFocusDirective,
+        NewTabComponent,
+        CallBlockerComponent,
+        LinksToolbarComponent,
+        FlippingComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatTooltipModule,
+        PdfViewerModule,
+        MarkdownModule.forRoot({
+            loader: HttpClient,
+            markedOptions: {
+                provide: {},
+                useValue: {
+                    grm: true,
+                    smartypants: true
+                }
+            }
+        })], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

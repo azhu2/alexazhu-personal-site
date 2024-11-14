@@ -8,20 +8,20 @@ markdown {
 
         * {
             padding: 0.25em 0.5em;
-            border: 1px solid mat.get-color-from-palette($mat-primary, main);
+            border: 1px solid mat.m2-get-color-from-palette($mat-primary, main);
         }
 
         tr:nth-child(even) {
-            background-color: mat.get-color-from-palette($mat-primary, lighter);
+            background-color: mat.m2-get-color-from-palette($mat-primary, lighter);
         }
     }
 
     code {
-        color: mat.get-color-from-palette($mat-primary, darker);
+        color: mat.m2-get-color-from-palette($mat-primary, darker);
     }
 
     pre {
-        background-color: mat.get-color-from-palette($mat-primary, lighter);
+        background-color: mat.m2-get-color-from-palette($mat-primary, lighter);
         padding: 0.5em;
         display: inline-flex;
         max-width: 100%;
@@ -33,7 +33,7 @@ markdown {
 
     blockquote {
         margin-left: 0;
-        border-left: 4px solid mat.get-color-from-palette($mat-accent, lighter);
+        border-left: 4px solid mat.m2-get-color-from-palette($mat-accent, lighter);
         padding-left: 1em;
     }
 }

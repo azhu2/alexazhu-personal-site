@@ -18,7 +18,7 @@ app-root {
 }
 
 a {
-    color: mat.get-color-from-palette($mat-accent, main);
+    color: mat.m2-get-color-from-palette($mat-accent, main);
 }
 
 ul {
@@ -32,7 +32,7 @@ img.img-icon {
 
 .page-content {
     padding: 1em 2em;
-    color: mat.get-color-from-palette(mat.$light-theme-foreground-palette, text);
+    color: mat.m2-get-color-from-palette(mat.$m2-light-theme-foreground-palette, text);
 }
 
 .img-splash {
