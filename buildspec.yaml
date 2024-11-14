@@ -26,7 +26,7 @@ phases:
             - echo S3 bucket is cleared.
 
             # Copy main build artifacts
-            - aws s3 cp dist/${APP_NAME} s3://${S3_BUCKET}/ --recursive
+            - aws s3 cp dist/${APP_NAME}/browser s3://${S3_BUCKET}/ --recursive
 
             # Copy new tab directly into assets
             - aws s3 cp $CODEBUILD_SRC_DIR_new_tab s3://${S3_BUCKET}/assets/new-tab/ --recursive
