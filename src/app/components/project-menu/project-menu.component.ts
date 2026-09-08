@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef  } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { MENU_TRANSITION_TIMEOUT_MS, FOCUS_CLASSES } from '../../../constants';
 
@@ -6,6 +6,7 @@ import { MENU_TRANSITION_TIMEOUT_MS, FOCUS_CLASSES } from '../../../constants';
     selector: 'app-project-menu',
     templateUrl: './project-menu.component.html',
     styleUrls: ['./project-menu.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 
