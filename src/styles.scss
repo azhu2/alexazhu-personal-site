@@ -2,7 +2,8 @@
 @use 'm3-theme';
 @import 'markdown';
 
-@include mat.core();
+@include mat.elevation-classes();
+@include mat.app-background();
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
